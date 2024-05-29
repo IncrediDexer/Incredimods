@@ -9,11 +9,11 @@
     <meta name='copyright' content='http://www.sofarsogood.fr'>
     <meta name='format-detection' content='telephone=no'>
     <meta name='msapplication-tap-highlight' content='no'>
-    <meta name='viewport' content='user-scalable=no,initial-scale=1,minimum-scale=1,width=device-width,height=device-height,viewport-fit=cover'>
+    <meta name='viewport' content='user-scalable=no,initial-scale=1,minimum-scale=1,width=device-width,height=device-height'>
     <link rel='stylesheet' type='text/css' href='css/style.min.css'>
 </head>
 
-<body>
+<body class='black'>
     <div id='app-incredibox'>
         <div id='content'>
             <div id='page-splash'>
@@ -51,13 +51,9 @@
                     <div class='scale'>
                         <div class='box'>
                             <div class='box-tab'>
-                                <div class='tab' id='tab-mod'>Mod Credit</div>
                                 <div class='tab' id='tab-tuto'>Help</div>
                                 <div class='tab' id='tab-credit'>Credits</div>
                                 <div class='tab' id='tab-follow'>Follow</div>
-                            </div>
-                            <div class='pop' id='pop-mod'><img src='img/popup-album.png' width='600' height='275' class='center'>
-                                <div class='textcenter' id='mod'><br><b>Thank you for using the template!</b><br> Template made by Artemiy Kopych</div>
                             </div>
                             <div class='pop' id='pop-tuto'>
                                 <div class='container'>
@@ -189,22 +185,24 @@
                     <div class='scale'>
                         <div class='box'>
                             <div class='box-tab'>
-                                <div class='tab' id='tab-language'>Language</div>
                                 <div class='tab' id='tab-setting'>Settings</div>
-                            </div>
-                            <div class='pop' id='pop-language'>
-                                <div class='container'>
-                                    <div class='box-lang'></div>
-                                </div>
                             </div>
                             <div class='pop' id='pop-setting'>
                                 <div class='container'>
-                                    <div class='paramline' id='param-dark'><span class='label'>Dark mode</span>
-                                        <div class='bt-mini bt-onoff hoverLocked'>
+                                    <div class='paramline' id='param-hdef'><span class='label'>Mode HD</span> <span class='ic-info'><svg class='icn-svg'>
+                                                <use xlink:href='#ic-help'></use>
+                                            </svg>
+                                            <div class='hitzone'></div>
+                                        </span>
+                                        <div class='bt-mini bt-onoff'>
                                             <div class='slider'></div>
-                                            <div class='ic-locked'><svg class='icn-svg'>
-                                                    <use xlink:href='#ic-lock'></use>
-                                                </svg></div>
+                                            <div class='hitzone'></div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class='paramline' id='param-dark'><span class='label'>Dark mode</span>
+                                        <div class='bt-mini bt-onoff'>
+                                            <div class='slider'></div>
                                             <div class='hitzone'></div>
                                         </div>
                                     </div>
@@ -214,11 +212,8 @@
                                             </svg>
                                             <div class='hitzone'></div>
                                         </span>
-                                        <div class='bt-mini bt-onoff hoverLocked'>
+                                        <div class='bt-mini bt-onoff'>
                                             <div class='slider'></div>
-                                            <div class='ic-locked'><svg class='icn-svg'>
-                                                    <use xlink:href='#ic-lock'></use>
-                                                </svg></div>
                                             <div class='hitzone'></div>
                                         </div>
                                     </div>
@@ -228,11 +223,8 @@
                                             </svg>
                                             <div class='hitzone'></div>
                                         </span>
-                                        <div class='bt-mini light hoverLocked'>
+                                        <div class='bt-mini light'>
                                             <div class='txt'>Reset</div>
-                                            <div class='ic-locked'><svg class='icn-svg'>
-                                                    <use xlink:href='#ic-lock'></use>
-                                                </svg></div>
                                             <div class='hitzone'></div>
                                         </div>
                                     </div>
@@ -242,16 +234,13 @@
                                             </svg>
                                             <div class='hitzone'></div>
                                         </span>
-                                        <div class='bt-mini light hoverLocked'>
+                                        <div class='bt-mini light'>
                                             <div class='txt'>Recover</div>
-                                            <div class='ic-locked'><svg class='icn-svg'>
-                                                    <use xlink:href='#ic-lock'></use>
-                                                </svg></div>
                                             <div class='hitzone'></div>
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class='text mini'>Version 0.5.7</div>
+                                    <div class='text mini'>Version 1.2.1</div>
                                 </div>
                             </div>
                         </div>
@@ -293,33 +282,27 @@
                 </div>
             </div>
         </div>
+        <div class='box-popup' id='pop-menu-exit'>
+            <div class='bac'></div>
+            <div class='flex'>
+                <div class='scale'>
+                    <div class='box'>
+                        <div class='pop'><span class='icon'><svg class='icn-svg'>
+                                    <use xlink:href='#ic-close'></use>
+                                </svg></span>
+                            <div class='container'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id='fade-all' class='fadeIn'></div>
     <div id='lock-all'></div>
-    <script src='cordova.js'></script>
+    <div id='dragbar'></div>
     <script src='js/libs/jquery.js'></script>
     <script src='js/index.min.js'></script><svg aria-hidden='true' style='position: absolute; width: 0; height: 0; overflow: hidden;' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
         <defs>
-            <symbol id='ic-schools' viewBox='0 0 32 32'>
-                <path d='M26.133 18.827c0.183-0.249 0.294-0.563 0.294-0.901 0-0.009-0-0.019-0-0.028l0 0.001c0.001-0.021 0.002-0.046 0.002-0.070 0-0.414-0.186-0.784-0.48-1.032l-0.002-0.002v-2.613c0-0.218-0.177-0.395-0.395-0.395v0h-8.192c-0.394 0.142-0.848 0.224-1.322 0.224-0.013 0-0.027-0-0.040-0h0.002c-1.237 0-2.24-0.469-2.24-1.067s1.003-1.067 2.24-1.067c0.009-0 0.019-0 0.030-0 0.476 0 0.934 0.080 1.36 0.228l-0.029-0.009h8.16c0.005 0.001 0.011 0.002 0.017 0.002 0.050 0 0.091-0.041 0.091-0.091 0-0.041-0.027-0.075-0.064-0.087l-0.001-0-9.168-4.267c-0.116-0.056-0.251-0.088-0.395-0.088s-0.279 0.032-0.4 0.090l0.006-0.002-10.757 5.045c-0.106 0.044-0.179 0.147-0.179 0.267s0.073 0.223 0.177 0.266l0.002 0.001 10.757 5.045c0.116 0.056 0.251 0.088 0.395 0.088s0.279-0.032 0.4-0.090l-0.006 0.002 8.891-4.171v2.667c-0.327 0.239-0.537 0.622-0.537 1.054 0 0.037 0.002 0.073 0.004 0.108l-0-0.005c-0 0.012-0.001 0.025-0.001 0.039 0 0.343 0.119 0.659 0.317 0.908l-0.002-0.003c-0.37 0.491-0.597 1.109-0.608 1.779l-0 0.003c-0.001 0.016-0.002 0.035-0.002 0.053 0 0.391 0.316 0.707 0.706 0.709h0.902c0.388-0.002 0.701-0.316 0.701-0.704 0-0.021-0.001-0.041-0.003-0.061l0 0.003c0-0.003 0-0.007 0-0.010 0-0.689-0.237-1.324-0.634-1.825l0.005 0.006z'></path>
-                <path d='M15.728 20.549l-5.973-2.805v4.656c1.717 1.308 3.886 2.106 6.239 2.133l0.006 0c2.36-0.028 4.528-0.825 6.271-2.152l-0.026 0.019v-4.656l-5.973 2.805c-0.080 0.038-0.173 0.060-0.272 0.060s-0.192-0.022-0.276-0.062l0.004 0.002z'></path>
-            </symbol>
-            <symbol id='ic-signout' viewBox='0 0 32 32'>
-                <path d='M9.867 14.192c0.442 0 0.8-0.358 0.8-0.8v0-3.792h6.453c0.442 0 0.8-0.358 0.8-0.8s-0.358-0.8-0.8-0.8v0h-7.248c-0 0-0.001 0-0.002 0-0.22 0-0.42 0.090-0.564 0.235l-0 0c-0.148 0.141-0.24 0.34-0.24 0.56 0 0.004 0 0.007 0 0.011v-0.001 4.587c0 0.442 0.358 0.8 0.8 0.8v0z'></path>
-                <path d='M17.125 22.4h-6.459v-3.787c0-0.442-0.358-0.8-0.8-0.8s-0.8 0.358-0.8 0.8v0 4.587c0 0 0 0.001 0 0.002 0 0.22 0.090 0.42 0.235 0.564l0 0c0.141 0.145 0.337 0.235 0.555 0.235 0.004 0 0.007-0 0.011-0h7.253c0.442 0 0.8-0.358 0.8-0.8s-0.358-0.8-0.8-0.8v0z'></path>
-                <path d='M25.067 15.499l-4.267-2.667c-0.086-0.053-0.19-0.084-0.301-0.084s-0.215 0.031-0.304 0.086l0.003-0.001c-0.183 0.103-0.304 0.296-0.304 0.517 0 0.006 0 0.011 0 0.017l-0-0.001v1.867h-6.059c-0.442 0-0.8 0.358-0.8 0.8s0.358 0.8 0.8 0.8v0h6.075v1.835c-0 0.003-0 0.006-0 0.010 0 0.223 0.121 0.418 0.301 0.522l0.003 0.002c0.083 0.044 0.181 0.069 0.285 0.069 0.001 0 0.002 0 0.004 0h-0c0.006 0 0.013 0 0.020 0 0.102 0 0.198-0.026 0.282-0.071l-0.003 0.002 4.267-2.667c0.171-0.107 0.282-0.294 0.283-0.507v-0c0-0.008 0.001-0.017 0.001-0.026 0-0.212-0.112-0.398-0.281-0.501l-0.003-0.001z'></path>
-            </symbol>
-            <symbol id='ic-news' viewBox='0 0 32 32'>
-                <path d='M20.8 6.533c-0.066-0.225-0.27-0.387-0.513-0.387-0.123 0-0.236 0.041-0.326 0.111l0.001-0.001-7.163 5.445 2.133 7.883 8.928 1.067c0.020 0.003 0.043 0.004 0.066 0.004 0.295 0 0.533-0.239 0.533-0.533 0-0.049-0.007-0.096-0.019-0.141l0.001 0.004z'></path>
-                <path d='M25.328 12.501c-0.266-0.97-0.937-1.747-1.814-2.152l-0.021-0.008 1.339 4.96c0.384-0.535 0.614-1.202 0.614-1.924 0-0.312-0.043-0.613-0.123-0.9l0.006 0.023z'></path>
-                <path d='M12.347 20.267l1.067-0.283-2.133-7.877-3.456 0.933c-0.914 0.255-1.573 1.080-1.573 2.058 0 0.192 0.025 0.377 0.073 0.554l-0.003-0.015-0.613 0.165 1.013 3.733 0.613-0.165v0.037c0.253 0.916 1.079 1.577 2.060 1.577 0.197 0 0.388-0.027 0.569-0.077l-0.015 0.004c0.496 1.547 1.435 4.043 2.475 4.64 0.047 0.035 0.107 0.056 0.171 0.056 0.015 0 0.029-0.001 0.044-0.003l-0.002 0 2.475-0.667c0.097-0.024 0.167-0.11 0.167-0.212 0-0.056-0.021-0.107-0.055-0.145l0 0c-1.099-1.251-2.057-2.669-2.823-4.2l-0.052-0.115z'></path>
-            </symbol>
-            <symbol id='ic-fullscreen-on' viewBox='0 0 32 32'>
-                <path d='M22.4 9.6v0 3.792c0 0.442 0.358 0.8 0.8 0.8s0.8-0.358 0.8-0.8v0-4.592c-0.001-0.221-0.090-0.42-0.235-0.565l0 0c-0.145-0.144-0.345-0.234-0.565-0.235h-4.592c-0.442 0-0.8 0.358-0.8 0.8s0.358 0.8 0.8 0.8v0z'></path>
-                <path d='M9.6 9.6h3.792c0.442 0 0.8-0.358 0.8-0.8s-0.358-0.8-0.8-0.8v0h-4.592c-0.221 0.001-0.42 0.090-0.565 0.235l0-0c-0.144 0.145-0.234 0.345-0.235 0.565v4.592c0 0.442 0.358 0.8 0.8 0.8s0.8-0.358 0.8-0.8v0z'></path>
-                <path d='M9.6 22.4v0-3.792c0-0.442-0.358-0.8-0.8-0.8s-0.8 0.358-0.8 0.8v0 4.592c0.001 0.221 0.090 0.42 0.235 0.565l-0-0c0.145 0.144 0.345 0.234 0.565 0.235h4.592c0.442 0 0.8-0.358 0.8-0.8s-0.358-0.8-0.8-0.8v0z'></path>
-                <path d='M22.4 22.4h-3.792c-0.442 0-0.8 0.358-0.8 0.8s0.358 0.8 0.8 0.8v0h4.592c0.221-0.001 0.42-0.090 0.565-0.235l-0 0c0.144-0.145 0.234-0.345 0.235-0.565v-4.592c0-0.442-0.358-0.8-0.8-0.8s-0.8 0.358-0.8 0.8v0z'></path>
-            </symbol>
             <symbol id='ic-lock' viewBox='0 0 32 32'>
                 <path d='M21.579 13.333h-1.28v-2.453c0-1.968-1.877-4.112-4.347-4.16-2.317 0.044-4.196 1.86-4.341 4.147l-0.001 0.013v2.453h-1.189c-0.010-0-0.021-0.001-0.033-0.001-0.571 0-1.035 0.463-1.035 1.035 0 0.011 0 0.023 0.001 0.034l-0-0.002v7.909c-0 0.010-0.001 0.021-0.001 0.032 0 0.571 0.463 1.035 1.035 1.035 0.011 0 0.023-0 0.034-0.001l-0.002 0h11.157c0.010 0 0.021 0 0.032 0 0.571 0 1.035-0.463 1.035-1.035 0-0.011-0-0.023-0.001-0.034l0 0.002v-7.861c0.001-0.014 0.001-0.031 0.001-0.048 0-0.589-0.478-1.067-1.067-1.067-0 0-0.001 0-0.001 0h0zM13.211 10.928c0.112-1.427 1.298-2.542 2.744-2.542s2.632 1.115 2.743 2.533l0.001 0.010v2.464h-5.488z'></path>
             </symbol>
